@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 const {
   addUser,
   getUser,
@@ -10,9 +12,10 @@ const express = require('express')
 const router = require('./router')
 const socketio = require('socket.io')
 
-// eslint-disable-next-line no-undef
-const PORT = process.env.PORT || 3001 
+if (process.env.NODE_ENV !== 'PRODUCTION')
+  require('dotenv').config();
 
+const PORT = process.env.PORT || 3001
 const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
