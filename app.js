@@ -10,7 +10,6 @@ const express = require('express')
 const router = require('./router')
 const socketio = require('socket.io')
 
-// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 3001 
 
 const app = express()
