@@ -15,7 +15,7 @@ const socketio = require('socket.io')
 if (process.env.NODE_ENV !== 'PRODUCTION')
   require('dotenv').config();
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
