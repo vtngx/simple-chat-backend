@@ -31,7 +31,7 @@ jobs:
       run: npm ci
     
     - name: Quality Check
-      # continue-on-error: true
+      continue-on-error: true
       run: npm run lint
     
     - name: Build
